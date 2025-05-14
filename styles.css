@@ -1,9 +1,30 @@
-body {
-  background-color: black;
-  color: white;
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  color: #ffffff;
   text-align: center;
+  font-size: 1.2rem;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#container {
+  align-self: center;
+  width: 512px;
+  height: 512px;
+  background-image: url('pope.jpg');
 }
 
 footer {
+  color: #000000;
+  background: #ffffff;
   text-align: center;
+  padding: 1em 0;
 }
+

@@ -5,10 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="styles.css" rel="stylesheet">
   <meta name="description" content="Straight From The Streets. A streetwear brand made in Czechia">
-  <meta name="keywords" content="Fashion,Clothing,Streetwear,Drip">
+  <meta name="keywords" content="Fashion,Clothing,Streetwear">
 </head>
 <body>
 <h1>Straight from the Streets</h1>
+<div id="container"></div>
+<p id="time"></p>
+<script>
+  const now = new Date();
+
+  const time = now.toLocaleTimeString('en-US', {
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: true
+  }).toLowerCase();
+
+  const weekday = now.toLocaleDateString('en-US', { weekday: 'long' });
+  const month = now.toLocaleDateString('en-US', { month: 'long' });
+  const day = now.getDate();
+  const year = now.getFullYear();
+
+  const date = `${weekday} ${month} ${day} ${year}`;
+
+  document.getElementById("time").innerHTML = `${time} ${date}`;
+</script>
 <footer><p>&copy Straight from the Streets</p></footer>
 </body>
 </html>
