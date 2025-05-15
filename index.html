@@ -10,10 +10,10 @@
 </head>
 <body>
 <h1>Straight from the Streets</h1>
-<div id="container">
-  
-</div>
 <p id="time"></p>
+<div id="container">
+
+</div>
 <script>
   const now = new Date();
 
@@ -23,14 +23,13 @@
     hour12: true
   }).toLowerCase();
 
-  const weekday = now.toLocaleDateString('en-US', { weekday: 'long' });
-  const month = now.toLocaleDateString('en-US', { month: 'long' });
   const day = now.getDate();
+  const month = now.getMonth() + 1;
   const year = now.getFullYear();
 
-  const date = `${weekday} ${month} ${day} ${year}`;
+  const formattedDate = `${day}/${month}/${year} ${time}`;
 
-  document.getElementById("time").innerHTML = `${time} ${date}`;
+  document.getElementById("time").innerHTML = formattedDate;
 </script>
 <footer><p>&copy Straight from the Streets</p></footer>
 </body>
